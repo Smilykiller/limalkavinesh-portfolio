@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limalkavinesh I - Professional Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+            --dark-bg: #121212;
+            --light-text: #f8f9fa;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            scroll-behavior: smooth;
+        }
+        /* Navbar */
+        .navbar {
+            background-color: rgba(18, 18, 18, 0.95) !important;
+            backdrop-filter: blur(10px);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        /* Hero Section */
+        #home {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(13,110,253,0.1) 0%, rgba(18,18,18,1) 100%);
+        }
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+        }
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: #adb5bd;
+            margin-bottom: 2rem;
+        }
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        .section-title {
+            margin-bottom: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--primary-color);
+            bottom: -10px;
+            left: 25%;
+        }
+        /* Cards */
+        .card {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            color: var(--light-text);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(13, 110, 253, 0.2);
+            border-color: var(--primary-color);
+        }
+        /* Skills Badge */
+        .skill-badge {
+            font-size: 1rem;
+            padding: 10px 15px;
+            margin: 5px;
+            background-color: #2b2b2b;
+            border: 1px solid #444;
+            border-radius: 50px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .skill-badge:hover {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        /* Footer */
+        footer {
+            background-color: #0a0a0a;
+            padding: 30px 0;
+            text-align: center;
+        }
+        .social-links a {
+            color: var(--light-text);
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#home">LIMALKAVINESH I</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a class="btn btn-outline-info btn-sm rounded-pill px-4 py-2 fw-bold" href="Limal_resume.pdf" download="Limal_resume.pdf">
+                            <i class="fas fa-file-download me-2"></i>Resume
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="container text-center text-md-start">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="hero-title">Hi, I'm Limalkavinesh I</h1>
+                    <p class="hero-subtitle">Frontend Developer & Software Engineer</p>
+                    <p class="lead mb-4">Building user-friendly, responsive, and highly efficient web applications using modern technologies.</p>
+                    
+                    <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-3">
+                        <a href="#projects" class="btn btn-primary btn-lg px-4 py-2">View My Work</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg px-4 py-2">Contact Me</a>
+                        <a href="Limal_resume.pdf" download="Limal_resume.pdf" class="btn btn-success btn-lg px-4 py-2">
+                            <i class="fas fa-download me-2"></i>Download CV
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 d-none d-md-block text-center mt-5 mt-md-0">
+                    <img src="resume_img.jpg" alt="Profile" class="img-fluid rounded-circle border border-4 border-primary shadow-lg" style="width: 250px; height: 250px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="bg-dark">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">About Me & Skills</h2>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-6 mb-4">
+                    <h4>Professional Profile</h4>
+                    <p>Motivated software developer with a strong foundation in UI design, frontend technologies, and backend integrations. I specialize in crafting user-friendly interfaces and robust programming logic to deliver efficient applications.</p>
+                    <p>Currently pursuing my Bachelor of Science in Computer Science (2023-2026), alongside hands-on project development and internship experience.</p>
+                    
+                    <h5 class="mt-4">Soft Skills</h5>
+                    <div class="d-flex flex-wrap">
+                        <span class="badge bg-secondary m-1 p-2">Problem Solving</span>
+                        <span class="badge bg-secondary m-1 p-2">Quick Self-Learner</span>
+                        <span class="badge bg-secondary m-1 p-2">Adaptability & Creativity</span>
+                        <span class="badge bg-secondary m-1 p-2">Teamwork & Leadership</span>
+                        <span class="badge bg-secondary m-1 p-2">Task Management</span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h4>Technical Expertise</h4>
+                    <div class="mt-3">
+                        <div class="skill-badge"><i class="fab fa-html5 text-danger"></i> HTML5</div>
+                        <div class="skill-badge"><i class="fab fa-css3-alt text-primary"></i> CSS3</div>
+                        <div class="skill-badge"><i class="fab fa-js text-warning"></i> JavaScript</div>
+                        <div class="skill-badge"><i class="fab fa-react text-info"></i> React.js</div>
+                        <div class="skill-badge"><i class="fab fa-bootstrap text-purple"></i> Bootstrap</div>
+                        <div class="skill-badge"><i class="fab fa-python text-success"></i> Python</div>
+                        <div class="skill-badge"><i class="fab fa-java text-danger"></i> Java</div>
+                        <div class="skill-badge"><i class="fas fa-code text-light"></i> C / C++</div>
+                        <div class="skill-badge"><i class="fab fa-linux text-warning"></i> Linux (Ubuntu/Kali)</div>
+                        <div class="skill-badge"><i class="fas fa-terminal text-light"></i> Bash/Shell</div>
+                        <div class="skill-badge"><i class="fab fa-git-alt text-danger"></i> Git/GitHub</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Work Experience</h2>
+            </div>
+            <div class="row mt-5 justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card p-4 border-start border-primary border-5">
+                        <h3>Frontend Development Intern</h3>
+                        <h5 class="text-primary">VINSUP INFOTECH</h5>
+                        <p class="text-muted">Domain: Web Designing</p>
+                        <ul>
+                            <li>Built responsive and user-friendly web interfaces using HTML, CSS, and JavaScript.</li>
+                            <li>Utilized modern frameworks and libraries such as React.js and Bootstrap for component-based development.</li>
+                            <li>Created responsive layouts using Flexbox, Grid, and mobile-first design principles.</li>
+                            <li>Skilled in DOM manipulation, event handling, form validation, and API integration.</li>
+                            <li>Familiar with version control (Git), browser debugging tools, and performance optimization.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="bg-dark">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Key Projects</h2>
+            </div>
+            <div class="row mt-5 g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card p-4">
+                        <h4 class="card-title text-primary">Smart Campus Attendance</h4>
+                        <p class="text-muted small">In Process</p>
+                        <p class="card-text">Implemented real-time student validation using GPS-based verification. Designed responsive UI with reusable React components and integrated a secure API structure.</p>
+                        <div class="mt-auto">
+                            <p class="small text-warning"><strong>Tech:</strong> React, Node.js, Express, Firebase, Bootstrap</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card p-4">
+                        <h4 class="card-title text-primary">Makeup Artist Portfolio</h4>
+                        <p class="card-text">A fully responsive React-based website featuring service showcase, gallery, and an online booking system, designed with a custom gradient theme.</p>
+                        <div class="mt-auto">
+                            <p class="small text-warning"><strong>Tech:</strong> React.js, Tailwind CSS, React Router</p>
+                            <a href="https://kayazmakeup.netlify.app/" target="_blank" class="btn btn-sm btn-outline-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card p-4">
+                        <h4 class="card-title text-primary">Photographer Portfolio</h4>
+                        <p class="card-text">Modern photography website to publish professional works online, including a gallery, booking section, and dynamic portfolio layout.</p>
+                        <div class="mt-auto">
+                            <p class="small text-warning"><strong>Tech:</strong> React, Bootstrap, JavaScript, HTML, CSS</p>
+                            <a href="https://narensstudio.netlify.app/" target="_blank" class="btn btn-sm btn-outline-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 offset-lg-4">
+                    <div class="card p-4">
+                        <h4 class="card-title text-primary">Garage Management System</h4>
+                        <p class="card-text">A specialized application built using Sales Force to manage garage operations efficiently.</p>
+                        <div class="mt-auto">
+                            <p class="small text-warning"><strong>Tech:</strong> Sales Force</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Certifications & Achievements</h2>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-6 mb-4">
+                    <ul class="list-group list-group-flush bg-transparent">
+                        <li class="list-group-item bg-transparent text-light border-secondary"><i class="fas fa-trophy text-warning me-2"></i> 1st Prize - Debugging Competition (Bishop's Ambrose College)</li>
+                        <li class="list-group-item bg-transparent text-light border-secondary"><i class="fas fa-trophy text-warning me-2"></i> 2nd Prize - Paper Presentation (KIT College)</li>
+                        <li class="list-group-item bg-transparent text-light border-secondary"><i class="fas fa-trophy text-warning me-2"></i> 3rd Prize - Mathematical & Computational Biology 4.0 (NCMCB 2026)</li>
+                        <li class="list-group-item bg-transparent text-light border-secondary"><i class="fas fa-trophy text-warning me-2"></i> 3rd Prize - Photography Competition (Kathir College)</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush bg-transparent">
+                        <li class="list-group-item bg-transparent text-light border-secondary"><i class="fas fa-certificate text-primary me-2"></i> Frontend Development Course (VINSUP SKILL ACADEMY)</li>
+                        <li class="list-group-item bg-transparent text-light border-secondary"><i class="fas fa-certificate text-primary me-2"></i> Technical Team Member - Asian Book of Records (249 Hours)</li>
+                        <li class="list-group-item bg-transparent text-light border-secondary"><i class="fas fa-certificate text-primary me-2"></i> National Level Workshop "UNLOGGING THE WEBSITE"</li>
+                        <li class="list-group-item bg-transparent text-light border-secondary"><i class="fas fa-users text-primary me-2"></i> Volunteering & Event Management (Joint Treasurer, Class Rep)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-dark">
+        <div class="container text-center">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="lead mt-4 mb-5">Open for opportunities, freelance projects, and collaborations.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4 align-items-center text-center">
+                        <i class="fas fa-envelope fa-3x text-primary mb-3"></i>
+                        <h5>Email</h5>
+                        <p><a href="mailto:limalkavinesh18@gmail.com" class="text-light text-decoration-none">limalkavinesh18@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4 align-items-center text-center">
+                        <i class="fas fa-phone fa-3x text-primary mb-3"></i>
+                        <h5>Phone</h5>
+                        <p><a href="tel:+917904431650" class="text-light text-decoration-none">+91 7904431650</a></p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4 align-items-center text-center">
+                        <i class="fas fa-map-marker-alt fa-3x text-primary mb-3"></i>
+                        <h5>Location</h5>
+                        <p>Coimbatore, Tamil Nadu, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-links mb-4">
+                <a href="https://github.com/Smilykiller" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/limalkavinesh-i-9b6242377" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2026 Limalkavinesh I. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
